@@ -8,12 +8,5 @@ namespace aoc {
       fs.open(file);
       if(!fs.is_open()) throw std::runtime_error("Unable to open file.");
     }
-
-
-
-
-  
   }
 }
-
-

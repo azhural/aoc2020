@@ -42,8 +42,6 @@ namespace aoc {
         }
         return v;
       }
-
-
   }
 }
 
