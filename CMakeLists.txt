@@ -12,7 +12,6 @@ add_library(${PROJECT_NAME}_lib
 
 file(GLOB PUZZLE_SOURCES src/puzzle/*.cpp)
 foreach(source_file ${PUZZLE_SOURCES})
-  message(${source_file})
   get_filename_component(filename ${source_file} NAME_WE)
   add_executable(${filename} ${source_file})
   target_link_libraries(${filename} ${PROJECT_NAME}_lib)
