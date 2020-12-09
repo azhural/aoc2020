@@ -28,10 +28,10 @@ int main(int argc, char** argv) {
 
   for(auto it = v.begin(); it != v.end(); ++it) {
     for(auto to_it = it; to_it != v.end(); ++to_it) {
-      std::vector<int> subvec (it, to_it);
-      int sum = std::accumulate(subvec.begin(), subvec.end(), 0);
+      int sum = std::accumulate(it, to_it, 0);
       if(sum > target) break;
       if(sum == target) {
+        std::vector<int> subvec (it, to_it);
         std::sort(subvec.begin(), subvec.end());
         std::cout << subvec.front() + subvec.back() << std::endl;
         return 0;
